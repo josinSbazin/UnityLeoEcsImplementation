@@ -18,8 +18,7 @@ namespace Systems
         {
             if (_gameOverFilter.EntitiesCount > 0)
             {
-                _world.Dispose();
-
+                ClearWorld();
 #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
 #else
