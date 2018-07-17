@@ -4,7 +4,7 @@ namespace Components
 {
     public class Player
     {
-        public float Speed = 5f;
+        public float Speed;
         public Transform Transform;
     }
 }

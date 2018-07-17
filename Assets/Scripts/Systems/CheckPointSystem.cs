@@ -39,6 +39,7 @@ namespace Systems
                     if (magnitude <= 1.0f)
                     {
                         _world.CreateEntityWith<GameOverEvent>();
+                        return;
                     }
                 }
             }
