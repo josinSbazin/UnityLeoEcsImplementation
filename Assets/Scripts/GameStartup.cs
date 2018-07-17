@@ -1,6 +1,5 @@
 ﻿using Systems;
 using LeopotamGroup.Ecs;
-using LeopotamGroup.Ecs.UnityIntegration;
 using UnityEngine;
 
 public class GameStartup : MonoBehaviour
@@ -15,7 +14,7 @@ public class GameStartup : MonoBehaviour
         _world = new EcsWorld();
         
 #if UNITY_EDITOR
-        EcsWorldObserver.Create (_world);
+        LeopotamGroup.Ecs.UnityIntegration.EcsWorldObserver.Create (_world);
 #endif     
         _systems = new EcsSystems(_world)
             .Add(new UserInputSystem())
@@ -24,7 +23,7 @@ public class GameStartup : MonoBehaviour
             .Add(new GameOverSystem());
         _systems.Initialize();
 #if UNITY_EDITOR
-        EcsSystemsObserver.Create (_systems);
+        LeopotamGroup.Ecs.UnityIntegration.EcsSystemsObserver.Create (_systems);
 #endif
     }
 
