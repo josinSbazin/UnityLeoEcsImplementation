@@ -36,5 +36,6 @@ public class GameStartup : MonoBehaviour
     private void OnDisable()
     {
         _systems.Destroy();
+        _world.Dispose();
     }
 }
