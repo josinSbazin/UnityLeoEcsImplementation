@@ -1,0 +1,11 @@
+{
+    "name": "LeopotamGroup.Ecs.UnityIntegration.Editor",
+    "references": [
+        "LeopotamGroup.Ecs",
+        "LeopotamGroup.Ecs.UnityIntegration"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

@@ -1,0 +1,8 @@
+{
+    "name": "LeopotamGroup.Ecs.UnityIntegration",
+    "references": [
+        "LeopotamGroup.Ecs"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
