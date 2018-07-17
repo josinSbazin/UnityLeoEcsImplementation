@@ -13,12 +13,7 @@ namespace Systems
     [EcsInject]
     sealed class MovePlayerSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private float _playerSpeed;
-        
-        public MovePlayerSystem(float playerSpeed)
-        {
-            _playerSpeed = playerSpeed;
-        }
+        private const float PlayerSpeed = 10f;
         
         const string PlayerTag = "Player";
 
@@ -32,7 +27,7 @@ namespace Systems
             {
                 var tr = unityObject.transform;
                 var player = _world.CreateEntityWith<Player>();
-                player.Speed = _playerSpeed;
+                player.Speed = PlayerSpeed;
                 player.Transform = tr;
             }
         }
@@ -45,7 +40,6 @@ namespace Systems
         {
             for (int i = 0; i < _userInputFilter.EntitiesCount; i++)
             {
-                Debug.Log(_userInputFilter.EntitiesCount);
                 var direction = _userInputFilter.Components1[i].MoveDirection;
                 for (int j = 0; j < _playerFilter.EntitiesCount; j++)
                 {

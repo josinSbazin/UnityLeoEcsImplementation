@@ -14,7 +14,7 @@ public class GameStartup : MonoBehaviour
         _world = new EcsWorld();
         _systems = new EcsSystems(_world)
             .Add(new UserInputSystem())
-            .Add(new MovePlayerSystem(PlayerSpeed))
+            .Add(new MovePlayerSystem())
             .Add(new CheckPointSystem())
             .Add(new GameOverSystem());
         _systems.Initialize();
